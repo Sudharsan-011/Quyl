@@ -86,7 +86,7 @@ console.log("DATABASE_URL:", process.env.DATABASE_URL);
 // Start the server after verifying database connection
 const PORT = process.env.PORT || 5000;
 checkDatabaseConnection().then(() => {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server is running on port ${PORT}`);
   });
 });

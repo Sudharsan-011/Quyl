@@ -443,7 +443,7 @@ const Dashboard = ({ onAddStudent }) => {
   const fetchStudents = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/students');
+      const response = await fetch('https://quyl-1.onrender.com/students');
       if (!response.ok) {
         throw new Error('Failed to fetch students');
       }
