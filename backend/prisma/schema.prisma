@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model students {
+  id          Int      @id @default(autoincrement())
+  studentName String
+  cohort      String
+  courses     String
+  dateJoined  DateTime
+  lastLogin   DateTime
+  status      String
+
+  @@map("students")  // Map the Prisma model to the existing table "students"
+}
