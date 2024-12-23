@@ -12,7 +12,7 @@ model students {
   id          Int      @id @default(autoincrement())
   studentName String
   cohort      String
-  courses     String
+  courses     String[]
   dateJoined  DateTime
   lastLogin   DateTime
   status      String
